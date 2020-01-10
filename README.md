@@ -1,6 +1,3 @@
-# MIPS-Simulator
-Simulator of MIPS at the assembly language level.
-
 The following is a description of the different requirements our team decided on when implementing this project:
 
 1. Labels
@@ -25,7 +22,7 @@ The following is a description of the different requirements our team decided on
   * In our "programs" section, we split the simulator into 4 parts: a BitString class for saving each MIPS Instruction (which is the same LC3 Bitstring class but updated to handle MIPS 32 bit instructions), a Computer class that holds the current simulator memory and register status of the program and executes the instructions from the text file, a Decoder class that reads the text file and decodes the text into instructions, and the Main file that starts our program. 
   * We also decided to implement a GUI based on previous GUI projects we have created to make a simple MIPS Simulator GUI that shows the current memory locations and their status, the status of the registers, a console output of the code at the bottom of the GUI, and a controls option in the top left corner of the GUI that allows the user to load a chosen file to the GUI Simulator, execute said program, or exit the GUI program if desired. Our design decisions for the GUI mostly follows the same setup/style of MARS and LC3 so as to not confuse the user if they have previously used these programs and are used to this layout style. 
 
-7. How To Run Our Simulator:
+  7. How To Run Our Simulator:
   * Commandline: java -jar Mips_executable.jar
   * Top left coner, click "Controls"
   * Click "Load File" 
@@ -34,6 +31,5 @@ The following is a description of the different requirements our team decided on
   * Click "Controls" again and click "Execute"
   * Mips Simulator completed.
 
-8. Testing the instructions
+  8. Testing the instructions
   * We've provided JUnit test cases in the "test" package. Simply run the tests.
-

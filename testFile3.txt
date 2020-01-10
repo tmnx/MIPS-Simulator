@@ -1,0 +1,10 @@
+	.data
+n: .word 3
+	.text
+
+addi $s0 $zero 5		# $s0 = 5
+lw $s1 n				# $s1 = 3
+
+jump:
+addi $s0 $s0 -1			# s0 = 4, 3, end
+bne $s0 $s1 jump

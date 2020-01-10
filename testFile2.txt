@@ -1,0 +1,29 @@
+# MINH NGUYEN
+# TCSS 372
+
+# The test program
+
+		.data
+n: .word	4
+m: .word	3
+		.text
+
+main:
+lw	$s0	n
+lw	$s1	m
+or	$s2	$s0	$s1
+ori $s2	$s2 20
+addi	$sp	$sp	-12	# save 3 space on stack
+sw	$s2	0($sp)
+sw	$s2	4($sp)		# save $s2 on stack
+sw	$s2	8($sp)
+
+loop:
+addi	$s2	$s2	-1
+bne		$s2	$s0	loop	# if $s2 != $s0, go to loop
+beq		$s2 $zero loop
+addi	$sp	$sp	12		# pop
+j		exit
+and		$s2	$s0	$s1		# should skip this instruction
+
+exit:
